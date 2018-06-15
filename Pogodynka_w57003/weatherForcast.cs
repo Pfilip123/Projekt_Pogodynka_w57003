@@ -16,12 +16,15 @@ namespace Pogodynka_w57003
         public double temp { get; set; }
         public double pressure { get; set; }
         public double humidity { get; set; }
+        
+
     }
     public class weather
     {
         public string main { get; set; }
         public string description { get; set; }
-        
+        public string icon { get; set; }
+
     }
     public class wind
     {
@@ -34,7 +37,6 @@ namespace Pogodynka_w57003
     public class list
     {
         public string dt_txt { get; set; }
-        
         public wind wind { get; set; }
         public main main { get; set; }
         public List<weather> weather { get; set; }

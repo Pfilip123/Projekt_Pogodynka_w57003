@@ -19,6 +19,7 @@ namespace Pogodynka_w57003
             public int id { get; set; }
             public string main { get; set; }
             public string description { get; set; }
+            public string icon { get; set; }
         }
 
         public class main
@@ -45,7 +46,7 @@ namespace Pogodynka_w57003
             public double dt { get; set; }
             public wind wind { get; set; }
             public main main { get; set; }
-            public List<weather> weatherList { get; set; }
+            public List<weather> weather { get; set; }
             public coord coordinate { get; set; }         
         }
     }

@@ -60,27 +60,32 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label_preesure = new System.Windows.Forms.Label();
             this.label_speed = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label_temp_forcast = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.wyszukajToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label_city
             // 
             this.label_city.AutoSize = true;
             this.label_city.BackColor = System.Drawing.Color.Transparent;
+            this.label_city.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label_city.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label_city.ForeColor = System.Drawing.Color.Yellow;
-            this.label_city.Location = new System.Drawing.Point(300, 26);
+            this.label_city.ForeColor = System.Drawing.Color.LawnGreen;
+            this.label_city.Location = new System.Drawing.Point(320, 70);
             this.label_city.Name = "label_city";
             this.label_city.Size = new System.Drawing.Size(428, 46);
             this.label_city.TabIndex = 0;
@@ -91,9 +96,10 @@
             // 
             this.label_country.AutoSize = true;
             this.label_country.BackColor = System.Drawing.Color.Transparent;
+            this.label_country.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label_country.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label_country.ForeColor = System.Drawing.Color.Yellow;
-            this.label_country.Location = new System.Drawing.Point(767, 37);
+            this.label_country.ForeColor = System.Drawing.Color.LawnGreen;
+            this.label_country.Location = new System.Drawing.Point(787, 81);
             this.label_country.Name = "label_country";
             this.label_country.Size = new System.Drawing.Size(47, 31);
             this.label_country.TabIndex = 0;
@@ -110,7 +116,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::Pogodynka_w57003.Properties.Resources._0;
-            this.pictureBox1.Location = new System.Drawing.Point(56, 37);
+            this.pictureBox1.Location = new System.Drawing.Point(76, 81);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(215, 151);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -134,8 +140,9 @@
             // 
             this.label_day_forcast.AutoSize = true;
             this.label_day_forcast.BackColor = System.Drawing.Color.Transparent;
+            this.label_day_forcast.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label_day_forcast.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label_day_forcast.ForeColor = System.Drawing.Color.Yellow;
+            this.label_day_forcast.ForeColor = System.Drawing.Color.LawnGreen;
             this.label_day_forcast.Location = new System.Drawing.Point(79, 326);
             this.label_day_forcast.Name = "label_day_forcast";
             this.label_day_forcast.Size = new System.Drawing.Size(58, 24);
@@ -147,8 +154,9 @@
             // 
             this.label_conditionals_forcast.AutoSize = true;
             this.label_conditionals_forcast.BackColor = System.Drawing.Color.Transparent;
+            this.label_conditionals_forcast.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label_conditionals_forcast.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label_conditionals_forcast.ForeColor = System.Drawing.Color.Yellow;
+            this.label_conditionals_forcast.ForeColor = System.Drawing.Color.LawnGreen;
             this.label_conditionals_forcast.Location = new System.Drawing.Point(79, 469);
             this.label_conditionals_forcast.Name = "label_conditionals_forcast";
             this.label_conditionals_forcast.Size = new System.Drawing.Size(79, 24);
@@ -160,8 +168,9 @@
             // 
             this.label_preesure_forcast.AutoSize = true;
             this.label_preesure_forcast.BackColor = System.Drawing.Color.Transparent;
+            this.label_preesure_forcast.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label_preesure_forcast.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label_preesure_forcast.ForeColor = System.Drawing.Color.Yellow;
+            this.label_preesure_forcast.ForeColor = System.Drawing.Color.LawnGreen;
             this.label_preesure_forcast.Location = new System.Drawing.Point(183, 516);
             this.label_preesure_forcast.Name = "label_preesure_forcast";
             this.label_preesure_forcast.Size = new System.Drawing.Size(88, 24);
@@ -173,8 +182,9 @@
             // 
             this.label_wind_forcast.AutoSize = true;
             this.label_wind_forcast.BackColor = System.Drawing.Color.Transparent;
+            this.label_wind_forcast.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label_wind_forcast.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label_wind_forcast.ForeColor = System.Drawing.Color.Yellow;
+            this.label_wind_forcast.ForeColor = System.Drawing.Color.LawnGreen;
             this.label_wind_forcast.Location = new System.Drawing.Point(183, 553);
             this.label_wind_forcast.Name = "label_wind_forcast";
             this.label_wind_forcast.Size = new System.Drawing.Size(52, 24);
@@ -186,6 +196,7 @@
             // 
             this.label_forcast.AutoSize = true;
             this.label_forcast.BackColor = System.Drawing.Color.Transparent;
+            this.label_forcast.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label_forcast.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label_forcast.ForeColor = System.Drawing.Color.Yellow;
             this.label_forcast.Location = new System.Drawing.Point(39, 282);
@@ -199,8 +210,9 @@
             // 
             this.label_day_forcast2.AutoSize = true;
             this.label_day_forcast2.BackColor = System.Drawing.Color.Transparent;
+            this.label_day_forcast2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label_day_forcast2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label_day_forcast2.ForeColor = System.Drawing.Color.Yellow;
+            this.label_day_forcast2.ForeColor = System.Drawing.Color.LawnGreen;
             this.label_day_forcast2.Location = new System.Drawing.Point(384, 326);
             this.label_day_forcast2.Name = "label_day_forcast2";
             this.label_day_forcast2.Size = new System.Drawing.Size(58, 24);
@@ -212,8 +224,9 @@
             // 
             this.label_conditionals_forcast2.AutoSize = true;
             this.label_conditionals_forcast2.BackColor = System.Drawing.Color.Transparent;
+            this.label_conditionals_forcast2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label_conditionals_forcast2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label_conditionals_forcast2.ForeColor = System.Drawing.Color.Yellow;
+            this.label_conditionals_forcast2.ForeColor = System.Drawing.Color.LawnGreen;
             this.label_conditionals_forcast2.Location = new System.Drawing.Point(384, 469);
             this.label_conditionals_forcast2.Name = "label_conditionals_forcast2";
             this.label_conditionals_forcast2.Size = new System.Drawing.Size(79, 24);
@@ -225,8 +238,9 @@
             // 
             this.label_pressure_forcast2.AutoSize = true;
             this.label_pressure_forcast2.BackColor = System.Drawing.Color.Transparent;
+            this.label_pressure_forcast2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label_pressure_forcast2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label_pressure_forcast2.ForeColor = System.Drawing.Color.Yellow;
+            this.label_pressure_forcast2.ForeColor = System.Drawing.Color.LawnGreen;
             this.label_pressure_forcast2.Location = new System.Drawing.Point(488, 516);
             this.label_pressure_forcast2.Name = "label_pressure_forcast2";
             this.label_pressure_forcast2.Size = new System.Drawing.Size(88, 24);
@@ -238,8 +252,9 @@
             // 
             this.label_wind_forcast2.AutoSize = true;
             this.label_wind_forcast2.BackColor = System.Drawing.Color.Transparent;
+            this.label_wind_forcast2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label_wind_forcast2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label_wind_forcast2.ForeColor = System.Drawing.Color.Yellow;
+            this.label_wind_forcast2.ForeColor = System.Drawing.Color.LawnGreen;
             this.label_wind_forcast2.Location = new System.Drawing.Point(488, 553);
             this.label_wind_forcast2.Name = "label_wind_forcast2";
             this.label_wind_forcast2.Size = new System.Drawing.Size(52, 24);
@@ -251,9 +266,10 @@
             // 
             this.label_temp_forcast2.AutoSize = true;
             this.label_temp_forcast2.BackColor = System.Drawing.Color.Transparent;
+            this.label_temp_forcast2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label_temp_forcast2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label_temp_forcast2.ForeColor = System.Drawing.Color.Yellow;
-            this.label_temp_forcast2.Location = new System.Drawing.Point(546, 469);
+            this.label_temp_forcast2.ForeColor = System.Drawing.Color.LawnGreen;
+            this.label_temp_forcast2.Location = new System.Drawing.Point(515, 469);
             this.label_temp_forcast2.Name = "label_temp_forcast2";
             this.label_temp_forcast2.Size = new System.Drawing.Size(30, 24);
             this.label_temp_forcast2.TabIndex = 0;
@@ -264,8 +280,9 @@
             // 
             this.label_day_forcast3.AutoSize = true;
             this.label_day_forcast3.BackColor = System.Drawing.Color.Transparent;
+            this.label_day_forcast3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label_day_forcast3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label_day_forcast3.ForeColor = System.Drawing.Color.Yellow;
+            this.label_day_forcast3.ForeColor = System.Drawing.Color.LawnGreen;
             this.label_day_forcast3.Location = new System.Drawing.Point(680, 326);
             this.label_day_forcast3.Name = "label_day_forcast3";
             this.label_day_forcast3.Size = new System.Drawing.Size(58, 24);
@@ -277,8 +294,9 @@
             // 
             this.label_conditionals_forcast3.AutoSize = true;
             this.label_conditionals_forcast3.BackColor = System.Drawing.Color.Transparent;
+            this.label_conditionals_forcast3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label_conditionals_forcast3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label_conditionals_forcast3.ForeColor = System.Drawing.Color.Yellow;
+            this.label_conditionals_forcast3.ForeColor = System.Drawing.Color.LawnGreen;
             this.label_conditionals_forcast3.Location = new System.Drawing.Point(680, 469);
             this.label_conditionals_forcast3.Name = "label_conditionals_forcast3";
             this.label_conditionals_forcast3.Size = new System.Drawing.Size(79, 24);
@@ -290,8 +308,9 @@
             // 
             this.label_pressure_forcast3.AutoSize = true;
             this.label_pressure_forcast3.BackColor = System.Drawing.Color.Transparent;
+            this.label_pressure_forcast3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label_pressure_forcast3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label_pressure_forcast3.ForeColor = System.Drawing.Color.Yellow;
+            this.label_pressure_forcast3.ForeColor = System.Drawing.Color.LawnGreen;
             this.label_pressure_forcast3.Location = new System.Drawing.Point(784, 516);
             this.label_pressure_forcast3.Name = "label_pressure_forcast3";
             this.label_pressure_forcast3.Size = new System.Drawing.Size(88, 24);
@@ -303,8 +322,9 @@
             // 
             this.label_wind_forcast3.AutoSize = true;
             this.label_wind_forcast3.BackColor = System.Drawing.Color.Transparent;
+            this.label_wind_forcast3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label_wind_forcast3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label_wind_forcast3.ForeColor = System.Drawing.Color.Yellow;
+            this.label_wind_forcast3.ForeColor = System.Drawing.Color.LawnGreen;
             this.label_wind_forcast3.Location = new System.Drawing.Point(784, 553);
             this.label_wind_forcast3.Name = "label_wind_forcast3";
             this.label_wind_forcast3.Size = new System.Drawing.Size(52, 24);
@@ -316,9 +336,10 @@
             // 
             this.label_temp_forcast3.AutoSize = true;
             this.label_temp_forcast3.BackColor = System.Drawing.Color.Transparent;
+            this.label_temp_forcast3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label_temp_forcast3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label_temp_forcast3.ForeColor = System.Drawing.Color.Yellow;
-            this.label_temp_forcast3.Location = new System.Drawing.Point(842, 469);
+            this.label_temp_forcast3.ForeColor = System.Drawing.Color.LawnGreen;
+            this.label_temp_forcast3.Location = new System.Drawing.Point(806, 469);
             this.label_temp_forcast3.Name = "label_temp_forcast3";
             this.label_temp_forcast3.Size = new System.Drawing.Size(30, 24);
             this.label_temp_forcast3.TabIndex = 0;
@@ -341,9 +362,10 @@
             // 
             this.label_temp.AutoSize = true;
             this.label_temp.BackColor = System.Drawing.Color.Transparent;
+            this.label_temp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label_temp.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label_temp.ForeColor = System.Drawing.Color.Yellow;
-            this.label_temp.Location = new System.Drawing.Point(511, 87);
+            this.label_temp.ForeColor = System.Drawing.Color.LawnGreen;
+            this.label_temp.Location = new System.Drawing.Point(531, 131);
             this.label_temp.Name = "label_temp";
             this.label_temp.Size = new System.Drawing.Size(49, 46);
             this.label_temp.TabIndex = 2;
@@ -378,8 +400,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.ForeColor = System.Drawing.Color.Yellow;
+            this.label2.ForeColor = System.Drawing.Color.LawnGreen;
             this.label2.Location = new System.Drawing.Point(115, 553);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 24);
@@ -391,8 +414,9 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label3.ForeColor = System.Drawing.Color.Yellow;
+            this.label3.ForeColor = System.Drawing.Color.LawnGreen;
             this.label3.Location = new System.Drawing.Point(410, 553);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(57, 24);
@@ -404,8 +428,9 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label4.ForeColor = System.Drawing.Color.Yellow;
+            this.label4.ForeColor = System.Drawing.Color.LawnGreen;
             this.label4.Location = new System.Drawing.Point(716, 553);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(57, 24);
@@ -417,8 +442,9 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label5.ForeColor = System.Drawing.Color.Yellow;
+            this.label5.ForeColor = System.Drawing.Color.LawnGreen;
             this.label5.Location = new System.Drawing.Point(79, 516);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(93, 24);
@@ -430,8 +456,9 @@
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label6.ForeColor = System.Drawing.Color.Yellow;
+            this.label6.ForeColor = System.Drawing.Color.LawnGreen;
             this.label6.Location = new System.Drawing.Point(384, 516);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(93, 24);
@@ -443,8 +470,9 @@
             // 
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label7.ForeColor = System.Drawing.Color.Yellow;
+            this.label7.ForeColor = System.Drawing.Color.LawnGreen;
             this.label7.Location = new System.Drawing.Point(680, 516);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(93, 24);
@@ -456,8 +484,9 @@
             // 
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label8.ForeColor = System.Drawing.Color.Yellow;
+            this.label8.ForeColor = System.Drawing.Color.LawnGreen;
             this.label8.Location = new System.Drawing.Point(183, 516);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(88, 24);
@@ -465,26 +494,14 @@
             this.label8.Text = "Ciśnienie";
             this.label8.Click += new System.EventHandler(this.label1_Click);
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label10.ForeColor = System.Drawing.Color.Yellow;
-            this.label10.Location = new System.Drawing.Point(405, 144);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(88, 24);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "Ciśnienie";
-            this.label10.Click += new System.EventHandler(this.label1_Click);
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label11.ForeColor = System.Drawing.Color.Yellow;
-            this.label11.Location = new System.Drawing.Point(306, 144);
+            this.label11.ForeColor = System.Drawing.Color.LawnGreen;
+            this.label11.Location = new System.Drawing.Point(326, 188);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(93, 24);
             this.label11.TabIndex = 0;
@@ -495,9 +512,10 @@
             // 
             this.label_preesure.AutoSize = true;
             this.label_preesure.BackColor = System.Drawing.Color.Transparent;
+            this.label_preesure.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label_preesure.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label_preesure.ForeColor = System.Drawing.Color.Yellow;
-            this.label_preesure.Location = new System.Drawing.Point(405, 144);
+            this.label_preesure.ForeColor = System.Drawing.Color.LawnGreen;
+            this.label_preesure.Location = new System.Drawing.Point(467, 188);
             this.label_preesure.Name = "label_preesure";
             this.label_preesure.Size = new System.Drawing.Size(88, 24);
             this.label_preesure.TabIndex = 0;
@@ -508,9 +526,10 @@
             // 
             this.label_speed.AutoSize = true;
             this.label_speed.BackColor = System.Drawing.Color.Transparent;
+            this.label_speed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label_speed.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label_speed.ForeColor = System.Drawing.Color.Yellow;
-            this.label_speed.Location = new System.Drawing.Point(405, 181);
+            this.label_speed.ForeColor = System.Drawing.Color.LawnGreen;
+            this.label_speed.Location = new System.Drawing.Point(467, 225);
             this.label_speed.Name = "label_speed";
             this.label_speed.Size = new System.Drawing.Size(52, 24);
             this.label_speed.TabIndex = 0;
@@ -521,9 +540,10 @@
             // 
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label14.ForeColor = System.Drawing.Color.Yellow;
-            this.label14.Location = new System.Drawing.Point(342, 181);
+            this.label14.ForeColor = System.Drawing.Color.LawnGreen;
+            this.label14.Location = new System.Drawing.Point(362, 225);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(57, 24);
             this.label14.TabIndex = 0;
@@ -534,9 +554,10 @@
             // 
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label9.ForeColor = System.Drawing.Color.Yellow;
-            this.label9.Location = new System.Drawing.Point(304, 87);
+            this.label9.ForeColor = System.Drawing.Color.LawnGreen;
+            this.label9.Location = new System.Drawing.Point(324, 131);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(166, 46);
             this.label9.TabIndex = 0;
@@ -547,14 +568,45 @@
             // 
             this.label_temp_forcast.AutoSize = true;
             this.label_temp_forcast.BackColor = System.Drawing.Color.Transparent;
+            this.label_temp_forcast.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label_temp_forcast.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label_temp_forcast.ForeColor = System.Drawing.Color.Yellow;
-            this.label_temp_forcast.Location = new System.Drawing.Point(231, 469);
+            this.label_temp_forcast.ForeColor = System.Drawing.Color.LawnGreen;
+            this.label_temp_forcast.Location = new System.Drawing.Point(219, 469);
             this.label_temp_forcast.Name = "label_temp_forcast";
             this.label_temp_forcast.Size = new System.Drawing.Size(30, 24);
             this.label_temp_forcast.TabIndex = 0;
             this.label_temp_forcast.Text = "26";
             this.label_temp_forcast.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(56, 24);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 3;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(196, 22);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Wyszukaj";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.wyszukajToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(121, 26);
+            // 
+            // wyszukajToolStripMenuItem
+            // 
+            this.wyszukajToolStripMenuItem.Name = "wyszukajToolStripMenuItem";
+            this.wyszukajToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
+            this.wyszukajToolStripMenuItem.Text = "Wyszukaj";
             // 
             // Form1
             // 
@@ -562,6 +614,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Pogodynka_w57003.Properties.Resources.grass_3199370_960_720;
             this.ClientSize = new System.Drawing.Size(903, 637);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label_temp);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
@@ -589,7 +643,6 @@
             this.Controls.Add(this.label_day_forcast3);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.label10);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label_preesure_forcast);
             this.Controls.Add(this.label_day_forcast2);
@@ -607,6 +660,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -645,13 +699,16 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label_preesure;
         private System.Windows.Forms.Label label_speed;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label_temp_forcast;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem wyszukajToolStripMenuItem;
     }
 }
 

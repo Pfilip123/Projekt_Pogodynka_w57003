@@ -40,6 +40,7 @@ namespace Pogodynka_w57003
                 label_temp.Text = string.Format("{0} \u00B0" + "C", outPut.main.temp);
                 label_speed.Text = string.Format("{0} km/h", outPut.wind.speed);
                 label_preesure.Text = string.Format("{0}", outPut.main.pressure);
+                pictureBox1.Image = setIcon(outPut.weather[0].icon);
             }
 
 
@@ -56,29 +57,46 @@ namespace Pogodynka_w57003
                 var Object = JsonConvert.DeserializeObject<weatherForcast>(json);
 
                 weatherForcast forcast = Object;
-                label_day_forcast.Text = string.Format("{0}", forcast.list[6].dt_txt);
-                label_conditionals_forcast.Text = string.Format("{0}", forcast.list[6].weather[0].main);
-                label_temp_forcast.Text = string.Format("{0} \u00B0" + "C", forcast.list[6].main.temp);
-                label_preesure_forcast.Text = string.Format("{0}", forcast.list[6].main.pressure);
-                label_wind_forcast.Text = string.Format("{0} km/h", forcast.list[6].wind.speed);
+                //pogoda w jutrzejszym dniu
+                label_day_forcast.Text = string.Format("{0}", forcast.list[5].dt_txt);
+                label_conditionals_forcast.Text = string.Format("{0}", forcast.list[5].weather[0].main);
+                label_temp_forcast.Text = string.Format("{0} \u00B0" + "C", forcast.list[5].main.temp);
+                label_preesure_forcast.Text = string.Format("{0} hPa", forcast.list[5].main.pressure);
+                label_wind_forcast.Text = string.Format("{0} km/h", forcast.list[5].wind.speed);
+                pictureBox2.Image = setIcon(forcast.list[5].weather[0].icon);
 
-                label_temp_forcast2.Text = string.Format("{0} \u00B0" + "C", forcast.list[14].main.temp);
-                label_conditionals_forcast2.Text = string.Format("{0}", forcast.list[14].weather[0].main);
-                label_pressure_forcast2.Text = string.Format("{0}", forcast.list[14].main.pressure);
-                label_day_forcast2.Text = string.Format("{0}", forcast.list[14].dt_txt);
-                label_wind_forcast2.Text = string.Format("{0} km/h", forcast.list[14].wind.speed);
+                //pogoda w pojutrzejszym dniu
+                label_temp_forcast2.Text = string.Format("{0} \u00B0" + "C", forcast.list[13].main.temp);
+                label_conditionals_forcast2.Text = string.Format("{0}", forcast.list[13].weather[0].main);
+                label_pressure_forcast2.Text = string.Format("{0} hPa", forcast.list[13].main.pressure);
+                label_day_forcast2.Text = string.Format("{0}", forcast.list[13].dt_txt);
+                label_wind_forcast2.Text = string.Format("{0} km/h", forcast.list[13].wind.speed);
+                pictureBox4.Image = setIcon(forcast.list[5].weather[0].icon);
 
-                label_temp_forcast3.Text = string.Format("{0} \u00B0" + "C", forcast.list[22].main.temp);
-                label_conditionals_forcast3.Text = string.Format("{0}", forcast.list[22].weather[0].main);
-                label_pressure_forcast3.Text = string.Format("{0}", forcast.list[22].main.pressure);
-                label_day_forcast3.Text = string.Format("{0}", forcast.list[22].dt_txt);
-                label_wind_forcast3.Text = string.Format("{0} km/h", forcast.list[22].wind.speed);
-
+                //pogoda w popojutrzejszym dniu
+                label_temp_forcast3.Text = string.Format("{0} \u00B0" + "C", forcast.list[21].main.temp);
+                label_conditionals_forcast3.Text = string.Format("{0}", forcast.list[21].weather[0].main);
+                label_pressure_forcast3.Text = string.Format("{0} hPa", forcast.list[21].main.pressure);
+                label_day_forcast3.Text = string.Format("{0}", forcast.list[21].dt_txt);
+                label_wind_forcast3.Text = string.Format("{0} km/h", forcast.list[21].wind.speed);
+                pictureBox5.Image = setIcon(forcast.list[21].weather[0].icon);
             }
 
         }
        
+        Image setIcon(string iconID)
+        {
 
+            string url = string.Format("http://openweathermap.org/img/w/{0}.png", iconID);
+            var request = WebRequest.Create(url);
+            using (var response = request.GetResponse())
+            using (var weatherIcon = response.GetResponseStream())
+            {
+                Image weatherImg = Bitmap.FromStream(weatherIcon);
+                return weatherImg;
+            }
+        }
+        
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -103,6 +121,16 @@ namespace Pogodynka_w57003
         private void backgroundWorker3_DoWork(object sender, DoWorkEventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if(textBox1.Text !="")
+            {
+                getWeather(textBox1.Text);
+                getForcast(textBox1.Text);
+
+            }
         }
     }
 }
