@@ -138,9 +138,9 @@
             this.label_day_forcast.ForeColor = System.Drawing.Color.Yellow;
             this.label_day_forcast.Location = new System.Drawing.Point(40, 469);
             this.label_day_forcast.Name = "label_day_forcast";
-            this.label_day_forcast.Size = new System.Drawing.Size(38, 24);
+            this.label_day_forcast.Size = new System.Drawing.Size(58, 24);
             this.label_day_forcast.TabIndex = 0;
-            this.label_day_forcast.Text = "Dni";
+            this.label_day_forcast.Text = "Dzień";
             this.label_day_forcast.Click += new System.EventHandler(this.label1_Click);
             // 
             // label_conditionals_forcast
@@ -188,7 +188,7 @@
             this.label_temp_forcast.BackColor = System.Drawing.Color.Transparent;
             this.label_temp_forcast.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label_temp_forcast.ForeColor = System.Drawing.Color.Yellow;
-            this.label_temp_forcast.Location = new System.Drawing.Point(224, 469);
+            this.label_temp_forcast.Location = new System.Drawing.Point(189, 469);
             this.label_temp_forcast.Name = "label_temp_forcast";
             this.label_temp_forcast.Size = new System.Drawing.Size(30, 24);
             this.label_temp_forcast.TabIndex = 0;
@@ -216,9 +216,9 @@
             this.label_day_forcast2.ForeColor = System.Drawing.Color.Yellow;
             this.label_day_forcast2.Location = new System.Drawing.Point(292, 469);
             this.label_day_forcast2.Name = "label_day_forcast2";
-            this.label_day_forcast2.Size = new System.Drawing.Size(38, 24);
+            this.label_day_forcast2.Size = new System.Drawing.Size(58, 24);
             this.label_day_forcast2.TabIndex = 0;
-            this.label_day_forcast2.Text = "Dni";
+            this.label_day_forcast2.Text = "Dzień";
             this.label_day_forcast2.Click += new System.EventHandler(this.label1_Click);
             // 
             // label_conditionals_forcast2
@@ -266,7 +266,7 @@
             this.label_temp_forcast2.BackColor = System.Drawing.Color.Transparent;
             this.label_temp_forcast2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label_temp_forcast2.ForeColor = System.Drawing.Color.Yellow;
-            this.label_temp_forcast2.Location = new System.Drawing.Point(476, 469);
+            this.label_temp_forcast2.Location = new System.Drawing.Point(441, 469);
             this.label_temp_forcast2.Name = "label_temp_forcast2";
             this.label_temp_forcast2.Size = new System.Drawing.Size(30, 24);
             this.label_temp_forcast2.TabIndex = 0;
@@ -319,9 +319,9 @@
             this.label2.ForeColor = System.Drawing.Color.Yellow;
             this.label2.Location = new System.Drawing.Point(522, 469);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 24);
+            this.label2.Size = new System.Drawing.Size(58, 24);
             this.label2.TabIndex = 0;
-            this.label2.Text = "Dni";
+            this.label2.Text = "Dzień";
             this.label2.Click += new System.EventHandler(this.label1_Click);
             // 
             // label3
@@ -369,7 +369,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label6.ForeColor = System.Drawing.Color.Yellow;
-            this.label6.Location = new System.Drawing.Point(706, 469);
+            this.label6.Location = new System.Drawing.Point(671, 469);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(30, 24);
             this.label6.TabIndex = 0;
