@@ -11,27 +11,32 @@ namespace Pogodynka_w57003
         public city city { get; set; }
         public List<list> list { get; set; }
     }
-    public class temp
+    public class main
     {
-        public double day { get; set; }
+        public double temp { get; set; }
+        public double pressure { get; set; }
+        public double humidity { get; set; }
     }
     public class weather
     {
         public string main { get; set; }
         public string description { get; set; }
+        
     }
-    
+    public class wind
+    {
+        public double speed { get; set; }
+    }
     public class city
     {
         public string name { get; set; }
     }
     public class list
     {
-        public double dt { get; set; }
-        public double pressure { get; set; }
-        public double humidity { get; set; }
-        public double speed { get; set; }
-        public temp temp { get; set; }
+        public string dt_txt { get; set; }
+        
+        public wind wind { get; set; }
+        public main main { get; set; }
         public List<weather> weather { get; set; }
 
     }

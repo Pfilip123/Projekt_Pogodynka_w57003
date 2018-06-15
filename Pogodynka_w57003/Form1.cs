@@ -27,23 +27,57 @@ namespace Pogodynka_w57003
 
         void getWeather(string city)
         {
-            
-            
+            using (WebClient web = new WebClient())
+            {
+                string url = string.Format("http://api.openweathermap.org/data/2.5/weather?q={0}&APPID={1}&units=metric&cnt=6", city, APPID);
+                var json = web.DownloadString(url);
+                var result = JsonConvert.DeserializeObject<WeatherInfo.Root>(json);
+
+                WeatherInfo.Root outPut = result;
+
+                label_city.Text = string.Format("{0}", outPut.name);
+                label_country.Text = string.Format("{0}", outPut.sys.country);
+                label_temp.Text = string.Format("{0} \u00B0" + "C", outPut.main.temp);
+                label_speed.Text = string.Format("{0} km/h", outPut.wind.speed);
+                label_preesure.Text = string.Format("{0}", outPut.main.pressure);
+            }
+
+
         }
-        
+
         void getForcast(string city)
         {
-           
+            int day =23;
+            string url = string.Format("http://api.openweathermap.org/data/2.5/forecast?q={0}&units=metric&cnt={1}&APPID={2}", city, day, APPID);
+            using (WebClient web = new WebClient())
+            {
+
+                var json = web.DownloadString(url);
+                var Object = JsonConvert.DeserializeObject<weatherForcast>(json);
+
+                weatherForcast forcast = Object;
+                label_day_forcast.Text = string.Format("{0}", forcast.list[6].dt_txt);
+                label_conditionals_forcast.Text = string.Format("{0}", forcast.list[6].weather[0].main);
+                label_temp_forcast.Text = string.Format("{0} \u00B0" + "C", forcast.list[6].main.temp);
+                label_preesure_forcast.Text = string.Format("{0}", forcast.list[6].main.pressure);
+                label_wind_forcast.Text = string.Format("{0} km/h", forcast.list[6].wind.speed);
+
+                label_temp_forcast2.Text = string.Format("{0} \u00B0" + "C", forcast.list[14].main.temp);
+                label_conditionals_forcast2.Text = string.Format("{0}", forcast.list[14].weather[0].main);
+                label_pressure_forcast2.Text = string.Format("{0}", forcast.list[14].main.pressure);
+                label_day_forcast2.Text = string.Format("{0}", forcast.list[14].dt_txt);
+                label_wind_forcast2.Text = string.Format("{0} km/h", forcast.list[14].wind.speed);
+
+                label_temp_forcast3.Text = string.Format("{0} \u00B0" + "C", forcast.list[22].main.temp);
+                label_conditionals_forcast3.Text = string.Format("{0}", forcast.list[22].weather[0].main);
+                label_pressure_forcast3.Text = string.Format("{0}", forcast.list[22].main.pressure);
+                label_day_forcast3.Text = string.Format("{0}", forcast.list[22].dt_txt);
+                label_wind_forcast3.Text = string.Format("{0} km/h", forcast.list[22].wind.speed);
+
+            }
 
         }
-        DateTime getDate(double millisecound)
-        {
-
-            DateTime day = new System.DateTime(1970, 1, 1, 0, 0, 0, 0, System.DateTimeKind.Utc).ToLocalTime();
-            day = day.AddSeconds(millisecound).ToLocalTime();
-
-            return day;
-        }
+       
 
 
         private void Form1_Load(object sender, EventArgs e)
