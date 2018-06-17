@@ -96,6 +96,42 @@
   <ItemGroup>
     <None Include="Resources\grass-3199370_960_720.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="button_menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tlo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lightning-bolt-768801_960_720.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cloud-2446630_960_720.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cloud-2446630_960_7201.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fog-1535201_960_720.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sky-690293_960_720.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fog-1535201_960_7201.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

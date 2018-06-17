@@ -27,6 +27,7 @@ namespace Pogodynka_w57003
             public double temp { get; set; }
             public double pressure { get; set; }
             public double humidity { get; set; }
+           
         }
 
         public class wind
