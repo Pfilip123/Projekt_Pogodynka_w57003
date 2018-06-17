@@ -122,9 +122,9 @@
             this.label_city.ForeColor = System.Drawing.Color.MidnightBlue;
             this.label_city.Location = new System.Drawing.Point(368, 70);
             this.label_city.Name = "label_city";
-            this.label_city.Size = new System.Drawing.Size(428, 46);
+            this.label_city.Size = new System.Drawing.Size(138, 46);
             this.label_city.TabIndex = 0;
-            this.label_city.Text = "Rzeszów, Podkarpacie";
+            this.label_city.Text = "Miasto";
             this.label_city.Click += new System.EventHandler(this.label1_Click);
             // 
             // label_country
@@ -153,7 +153,7 @@
             this.label_day_forcast.BackColor = System.Drawing.Color.Transparent;
             this.label_day_forcast.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label_day_forcast.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label_day_forcast.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(121)))), ((int)(((byte)(0)))));
+            this.label_day_forcast.ForeColor = System.Drawing.Color.Maroon;
             this.label_day_forcast.Location = new System.Drawing.Point(127, 326);
             this.label_day_forcast.Name = "label_day_forcast";
             this.label_day_forcast.Size = new System.Drawing.Size(58, 24);
@@ -223,7 +223,7 @@
             this.label_day_forcast2.BackColor = System.Drawing.Color.Transparent;
             this.label_day_forcast2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label_day_forcast2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label_day_forcast2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(177)))), ((int)(((byte)(0)))));
+            this.label_day_forcast2.ForeColor = System.Drawing.Color.Red;
             this.label_day_forcast2.Location = new System.Drawing.Point(432, 326);
             this.label_day_forcast2.Name = "label_day_forcast2";
             this.label_day_forcast2.Size = new System.Drawing.Size(58, 24);
@@ -282,9 +282,9 @@
             this.label_temp_forcast2.ForeColor = System.Drawing.Color.Cornsilk;
             this.label_temp_forcast2.Location = new System.Drawing.Point(567, 475);
             this.label_temp_forcast2.Name = "label_temp_forcast2";
-            this.label_temp_forcast2.Size = new System.Drawing.Size(30, 24);
+            this.label_temp_forcast2.Size = new System.Drawing.Size(79, 24);
             this.label_temp_forcast2.TabIndex = 0;
-            this.label_temp_forcast2.Text = "26";
+            this.label_temp_forcast2.Text = "Stopnie ";
             this.label_temp_forcast2.Click += new System.EventHandler(this.label1_Click);
             // 
             // label_day_forcast3
@@ -293,7 +293,7 @@
             this.label_day_forcast3.BackColor = System.Drawing.Color.Transparent;
             this.label_day_forcast3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label_day_forcast3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label_day_forcast3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(232)))), ((int)(((byte)(0)))));
+            this.label_day_forcast3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label_day_forcast3.Location = new System.Drawing.Point(728, 326);
             this.label_day_forcast3.Name = "label_day_forcast3";
             this.label_day_forcast3.Size = new System.Drawing.Size(58, 24);
@@ -352,9 +352,9 @@
             this.label_temp_forcast3.ForeColor = System.Drawing.Color.Cornsilk;
             this.label_temp_forcast3.Location = new System.Drawing.Point(854, 475);
             this.label_temp_forcast3.Name = "label_temp_forcast3";
-            this.label_temp_forcast3.Size = new System.Drawing.Size(30, 24);
+            this.label_temp_forcast3.Size = new System.Drawing.Size(79, 24);
             this.label_temp_forcast3.TabIndex = 0;
-            this.label_temp_forcast3.Text = "26";
+            this.label_temp_forcast3.Text = "Stopnie ";
             this.label_temp_forcast3.Click += new System.EventHandler(this.label1_Click);
             // 
             // label_temp
@@ -366,9 +366,9 @@
             this.label_temp.ForeColor = System.Drawing.Color.MidnightBlue;
             this.label_temp.Location = new System.Drawing.Point(637, 131);
             this.label_temp.Name = "label_temp";
-            this.label_temp.Size = new System.Drawing.Size(49, 46);
+            this.label_temp.Size = new System.Drawing.Size(156, 46);
             this.label_temp.TabIndex = 2;
-            this.label_temp.Text = "C";
+            this.label_temp.Text = "Stopnie";
             this.label_temp.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
@@ -548,9 +548,9 @@
             this.label_temp_forcast.ForeColor = System.Drawing.Color.Cornsilk;
             this.label_temp_forcast.Location = new System.Drawing.Point(253, 475);
             this.label_temp_forcast.Name = "label_temp_forcast";
-            this.label_temp_forcast.Size = new System.Drawing.Size(30, 24);
+            this.label_temp_forcast.Size = new System.Drawing.Size(79, 24);
             this.label_temp_forcast.TabIndex = 0;
-            this.label_temp_forcast.Text = "26";
+            this.label_temp_forcast.Text = "Stopnie ";
             this.label_temp_forcast.Click += new System.EventHandler(this.label1_Click);
             // 
             // panel_wyszukiwarka
@@ -559,7 +559,7 @@
             this.panel_wyszukiwarka.Controls.Add(this.label1);
             this.panel_wyszukiwarka.Controls.Add(this.button1);
             this.panel_wyszukiwarka.Controls.Add(this.textBox1);
-            this.panel_wyszukiwarka.Location = new System.Drawing.Point(321, 205);
+            this.panel_wyszukiwarka.Location = new System.Drawing.Point(338, 180);
             this.panel_wyszukiwarka.Name = "panel_wyszukiwarka";
             this.panel_wyszukiwarka.Size = new System.Drawing.Size(384, 174);
             this.panel_wyszukiwarka.TabIndex = 6;
@@ -588,7 +588,7 @@
             this.button1.TabIndex = 1;
             this.button1.Text = "Szukaj";
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.button1.Click += new System.EventHandler(this.button_search_Click_1);
             // 
             // textBox1
             // 
@@ -772,7 +772,7 @@
             this.panel_mapyexperta.Controls.Add(this.gorzow_wklp);
             this.panel_mapyexperta.Controls.Add(this.linklowcyburz);
             this.panel_mapyexperta.Controls.Add(this.label10);
-            this.panel_mapyexperta.Location = new System.Drawing.Point(50, 0);
+            this.panel_mapyexperta.Location = new System.Drawing.Point(48, -1);
             this.panel_mapyexperta.Name = "panel_mapyexperta";
             this.panel_mapyexperta.Size = new System.Drawing.Size(913, 637);
             this.panel_mapyexperta.TabIndex = 201;
@@ -1130,11 +1130,11 @@
             this.linklowcyburz.LinkColor = System.Drawing.Color.White;
             this.linklowcyburz.Location = new System.Drawing.Point(28, 119);
             this.linklowcyburz.Name = "linklowcyburz";
-            this.linklowcyburz.Size = new System.Drawing.Size(153, 36);
+            this.linklowcyburz.Size = new System.Drawing.Size(197, 36);
             this.linklowcyburz.TabIndex = 1;
             this.linklowcyburz.TabStop = true;
-            this.linklowcyburz.Text = "Łowcy Burz";
-            this.linklowcyburz.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Lowcyburz_LinkClicked_1);
+            this.linklowcyburz.Text = "Mapa burzowa";
+            this.linklowcyburz.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Mapa_burzowa_LinkClicked_1);
             // 
             // label10
             // 

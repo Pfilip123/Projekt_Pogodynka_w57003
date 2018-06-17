@@ -90,6 +90,7 @@ namespace Pogodynka_w57003
 
         }
 
+        
         Image setIcon(string iconID)
         {
 
@@ -225,22 +226,6 @@ namespace Pogodynka_w57003
             
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            panel_wyszukiwarka.Visible = false;
-            if (textBox1.Text != "")
-            {
-
-                getWeather(textBox1.Text);
-                getForcast(textBox1.Text);
-                panel_wyszukiwarka.Visible = false;
-                panel_mapyexperta.Visible = false;
-                panel_dock.Width = 50;
-                panel_dock.Height = 637;
-                schowajelementydocka();
-            }
-        }
-
         private void panel4_Paint(object sender, PaintEventArgs e)
         {
 
@@ -262,20 +247,6 @@ namespace Pogodynka_w57003
         {
 
         }
-
-        private void Lowcyburz_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            string Lowcyburz = "http://lowcyburz.pl/wp-content/uploads/2018/06/outlook_2018.06.14.png";
-            WebRequest request = WebRequest.Create(Lowcyburz);
-            using (var response = request.GetResponse())
-            {
-                using (var str = response.GetResponseStream())
-                    pictureUrl.Image = Bitmap.FromStream(str);
-            }
-            hidecityum();
-        }
-
-
 
         private void estofex_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -356,7 +327,9 @@ namespace Pogodynka_w57003
         
          void setModelm(int row, int col)
         {
-            string city = string.Format("http://www.meteo.pl/um/metco/mgram_pict.php?ntype=0u&fdate=2018061706&row={0}&col={1}&lang=pl", row,col);
+            string city = string.Format
+           ("http://www.meteo.pl/um/metco/mgram_pict.php?ntype=0u&fdate=2018061706&row={0}&col={1}&lang=pl",
+                row,col);
             WebRequest request = WebRequest.Create(city);
             using (var response = request.GetResponse())
             {
@@ -449,16 +422,7 @@ namespace Pogodynka_w57003
             setModelm(370, 142);
         }
 
-               private void tarnobrzeg_Click_1(object sender, EventArgs e)
-               {
-                   string city = "http://www.meteo.pl/um/metco/mgram_pict.php?ntype=0u&fdate=2018061706&row=451&col=262&lang=pl";
-                   WebRequest request = WebRequest.Create(city);
-                   using (var response = request.GetResponse())
-                   {
-                       using (var str = response.GetResponseStream())
-                           pictureUrl.Image = Bitmap.FromStream(str);
-                   }
-               }
+             
 
                private void torun_Click_1(object sender, EventArgs e)
                {
@@ -498,6 +462,33 @@ namespace Pogodynka_w57003
                            pictureUrl.Image = Bitmap.FromStream(str);
                    }
             naglowek.Text = "Legenda";
+        }
+
+        private void button_search_Click_1(object sender, EventArgs e)
+        {
+            panel_wyszukiwarka.Visible = false;
+            if (textBox1.Text != "")
+            {
+                getWeather(textBox1.Text);
+                getForcast(textBox1.Text);
+                panel_wyszukiwarka.Visible = false;
+                panel_mapyexperta.Visible = false;
+                panel_dock.Width = 50;
+                panel_dock.Height = 637;
+                schowajelementydocka();
+            }
+        }
+
+        private void Mapa_burzowa_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            string Lowcyburz = "http://burza.umcs.lublin.pl/lm/blitzortung.php?map=3&bo_t=25487321";
+            WebRequest request = WebRequest.Create(Lowcyburz);
+            using (var response = request.GetResponse())
+            {
+                using (var str = response.GetResponseStream())
+                    pictureUrl.Image = Bitmap.FromStream(str);
+            }
+            hidecityum();
         }
     }
 }
