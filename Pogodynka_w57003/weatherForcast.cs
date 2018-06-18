@@ -4,6 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
+/// <summary>
+/// Klasa dla prognozy pogody
+/// </summary>
 namespace Pogodynka_w57003
 {
     class weatherForcast

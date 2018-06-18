@@ -10,14 +10,22 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Newtonsoft.Json;
 
+/// <summary>
+/// Głowna funkcjonalność progamu
+/// </summary>
 namespace Pogodynka_w57003
 {
 
     public partial class panel_glony : Form
     {
+        /// <summary>
+        /// Klucz API pobrane z witryny openweather.org
+        /// </summary>
         const string APPID = "5018a726f091f2f233b3af11f9e207c8";
 
-
+        /// <summary>
+        /// Domyślne miasto wczytywane przy starcie programu
+        /// </summary>
         public panel_glony()
         {
             InitializeComponent();
@@ -25,11 +33,15 @@ namespace Pogodynka_w57003
             getForcast("Rzeszow");
         }
 
+        /// <summary>
+        /// Funkcjonalność pobrania danych z API dla pogody aktualnej
+        /// </summary>
+        /// <param name="city"></param>
         void getWeather(string city)
         {
             using (WebClient web = new WebClient())
             {
-
+                
                 string url = string.Format("http://api.openweathermap.org/data/2.5/weather?q={0}&APPID={1}&units=metric&cnt=6", city, APPID);
 
                 var json = web.DownloadString(url);
@@ -45,12 +57,14 @@ namespace Pogodynka_w57003
                 pictureBox1.Image = setIcon(outPut.weather[0].icon);
                 label9.Text = string.Format("{0}", outPut.weather[0].description);
                  
-
             }
 
 
         }
-
+        /// <summary>
+        /// Funkcjonalność pobrania danych z API dla prognozy pogody
+        /// </summary>
+        /// <param name="city"></param>
         void getForcast(string city)
         {
             int day = 23;
@@ -62,7 +76,7 @@ namespace Pogodynka_w57003
                 var Object = JsonConvert.DeserializeObject<weatherForcast>(json);
 
                 weatherForcast forcast = Object;
-                //pogoda w jutrzejszym dniu
+                ///pogoda w jutrzejszym dniu
                 label_day_forcast.Text = string.Format("{0}", forcast.list[5].dt_txt);
                 label_conditionals_forcast.Text = string.Format("{0}", forcast.list[5].weather[0].main);
                 label_temp_forcast.Text = string.Format("{0} \u00B0" + "C", forcast.list[5].main.temp);
@@ -70,7 +84,7 @@ namespace Pogodynka_w57003
                 label_wind_forcast.Text = string.Format("{0} km/h", forcast.list[5].wind.speed);
                 pictureBox2.Image = setIcon(forcast.list[5].weather[0].icon);
 
-                //pogoda w pojutrzejszym dniu
+                ///pogoda w pojutrzejszym dniu
                 label_temp_forcast2.Text = string.Format("{0} \u00B0" + "C", forcast.list[13].main.temp);
                 label_conditionals_forcast2.Text = string.Format("{0}", forcast.list[13].weather[0].main);
                 label_pressure_forcast2.Text = string.Format("{0} hPa", forcast.list[13].main.pressure);
@@ -78,7 +92,7 @@ namespace Pogodynka_w57003
                 label_wind_forcast2.Text = string.Format("{0} km/h", forcast.list[13].wind.speed);
                 pictureBox4.Image = setIcon(forcast.list[13].weather[0].icon);
 
-                //pogoda w popojutrzejszym dniu
+                ///pogoda w popojutrzejszym dniu
                 
                 label_temp_forcast3.Text = string.Format("{0} \u00B0" + "C", forcast.list[21].main.temp);
                 label_conditionals_forcast3.Text = string.Format("{0}", forcast.list[21].weather[0].main);
@@ -90,7 +104,11 @@ namespace Pogodynka_w57003
 
         }
 
-        
+        /// <summary>
+        /// Klasa pobierająca obrazek przedstawiający stan nieba
+        /// </summary>
+        /// <param name="iconID"></param>
+        /// <returns></returns>
         Image setIcon(string iconID)
         {
 
@@ -105,26 +123,7 @@ namespace Pogodynka_w57003
         }
 
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
+   
 
         private void backgroundWorker3_DoWork(object sender, DoWorkEventArgs e)
         {
@@ -141,14 +140,9 @@ namespace Pogodynka_w57003
             }
         }
 
-
-
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            DialogResult result = MessageBox.Show("Kliknieto przycisk1");
-        }
-
-
+     /// <summary>
+     /// Klasa chowająca kontrolki w docku
+     /// </summary>
         void schowajelementydocka()
         {
             strona_glowna.Visible = false;
@@ -156,6 +150,10 @@ namespace Pogodynka_w57003
             Mapy_experta.Visible = false;
             Wyszukiwarka.Visible = false;
         }
+
+        /// <summary>
+        /// Klasa Pokazjuąca kontrolki w docku
+        /// </summary>
         void pokazelementydocka()
         {
             Wyszukiwarka.Visible = true;
@@ -163,8 +161,12 @@ namespace Pogodynka_w57003
             Zamknij.Visible = true;
             Mapy_experta.Visible = true;
         }
-            
 
+        /// <summary>
+        /// Funkcjonalnośc przyciska menu wysuwający i chowający banner
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void pictureBox6_Click(object sender, EventArgs e)
         {
             if (panel_dock.Width == 236 & panel_dock.Height == 637)
@@ -182,6 +184,11 @@ namespace Pogodynka_w57003
             }
         }
 
+        /// <summary>
+        /// Funckjonalnośc kontrolki Strona głowna
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void strona_glowna_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             panel_wyszukiwarka.Visible = false;
@@ -190,6 +197,11 @@ namespace Pogodynka_w57003
             panel_dock.Width = 50;
             panel_dock.Height = 637;
         }
+        /// <summary>
+        /// Funckjonalnośc kontrolki Mapy eksperta
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Mapy_experta_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             schowajelementydocka();
@@ -198,6 +210,11 @@ namespace Pogodynka_w57003
             panel_dock.Height = 637;
             panel_wyszukiwarka.Visible = false;
         }
+        /// <summary>
+        /// Funckjonalnośc kontrolki wyszukiwarka
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Wyszukiwarka_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {
             panel_wyszukiwarka.Visible = true;
@@ -206,7 +223,11 @@ namespace Pogodynka_w57003
             
         }
 
-
+        /// <summary>
+        /// Funkcjonalnoś przyciska zamknij
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Zamknij_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {
             DialogResult result = MessageBox.Show("Na pewno chcesz wyjść?", "Zamykanie"
@@ -221,33 +242,12 @@ namespace Pogodynka_w57003
             }
         }
 
-        void schowajdock()
-        {
-            
-        }
 
-        private void panel4_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-
-        private void pictureUrl_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        /// <summary>
+        /// Funckjonalnośc kontrolki estofex w panelu mapy eksperta
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void estofex_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {
             string estofex = "http://www.estofex.org/forecasts/tempmap/.png";
@@ -260,6 +260,11 @@ namespace Pogodynka_w57003
             hidecityum();
         }
 
+        /// <summary>
+        /// Funckjonalnośc kontrolki mapy um w panelu mapy eksperta
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void um_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {
             showcityum();
@@ -276,7 +281,11 @@ namespace Pogodynka_w57003
         {
 
         }
-         void showcityum()
+
+        /// <summary>
+        /// Funkcja pkazująca mista po wybraniu kontrolki Model UM
+        /// </summary>
+        void showcityum()
         {
             bialystok.Visible = true;
             bydgoszcz.Visible = true;
@@ -300,6 +309,10 @@ namespace Pogodynka_w57003
             legenda.Visible = true;
             naglowek.Visible = true;
         }
+
+        /// <summary>
+        /// Funkcja ukeywająca mista po wybraniu kontrolki Model UM
+        /// </summary>
         void hidecityum()
         {
             bialystok.Visible = false;
@@ -324,7 +337,12 @@ namespace Pogodynka_w57003
             legenda.Visible = false;
             naglowek.Visible = false;
         }
-        
+
+        /// <summary>
+        /// Funkcja implmentująca szerokośc i długośc geograficzną okreslonego miasta
+        /// </summary>
+        /// <param name="row"></param>
+        /// <param name="col"></param>
          void setModelm(int row, int col)
         {
             string city = string.Format
@@ -339,6 +357,11 @@ namespace Pogodynka_w57003
             
         }
 
+        /// <summary>
+        /// metody przypisujące wspólrzędne po kliknięciu na miasta
+        
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Bliaystok_Click_1(object sender, EventArgs e)
         {
             setModelm(379, 285);
@@ -450,8 +473,15 @@ namespace Pogodynka_w57003
             setModelm(412, 155);
 
         }
+        ///</summary>
+        
+        /// <summary>
+        /// funkcjonalnośc kontrolk legenda
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 
-               private void Legenda_Click_1(object sender, EventArgs e)
+        private void Legenda_Click_1(object sender, EventArgs e)
                {
                    string city = "http://www.meteo.pl/um/metco/leg_um_pl_cbase_256.png";
                    WebRequest request = WebRequest.Create(city);
@@ -464,6 +494,11 @@ namespace Pogodynka_w57003
             naglowek.Text = "Legenda";
         }
 
+        /// <summary>
+        /// Funkcjonalnosc przycisku "Wyszukaj" ,oraz metody pobierające tekst z pola tekstowego
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button_search_Click_1(object sender, EventArgs e)
         {
             panel_wyszukiwarka.Visible = false;
@@ -479,6 +514,11 @@ namespace Pogodynka_w57003
             }
         }
 
+        /// <summary>
+        /// Funckjonalnośc kontrolki Mapa burzowa w panelu mapy eksperta
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Mapa_burzowa_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {
             string Lowcyburz = "http://burza.umcs.lublin.pl/lm/blitzortung.php?map=3&bo_t=25487321";
@@ -490,5 +530,51 @@ namespace Pogodynka_w57003
             }
             hidecityum();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+
+        }
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+        private void pictureUrl_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
+
     }
 }
