@@ -4,19 +4,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-/// <summary>
-/// Klasa dla pogody oaktualnej
-/// </summary>
+
 namespace Pogodynka_w57003
 {
+    /// <summary>
+    /// Klasa dla pogody aktualnej
+    /// </summary>
     class WeatherInfo
     {
+        /// <summary>
+        /// klasa odpowiedzialna za pozycję geograficzną miejscowości
+        /// </summary>
         public class coord
         {
             public double lon { get; set; }
             public double lat { get; set; }
         }
 
+        /// <summary>
+        /// klasa odpowiedzialalna za pobranie ID miejscowości, wyświetlaniu stanu ogólnego
+        /// pogody, oraz ikony
+        /// </summary>
         public class weather
         {
             public int id { get; set; }
@@ -24,7 +32,9 @@ namespace Pogodynka_w57003
             public string description { get; set; }
             public string icon { get; set; }
         }
-
+        /// <summary>
+        /// klasa odpowiedzialalna za pobraine informacji o temepraturze, ciśnieniu, oraz wilgotności
+        /// </summary>
         public class main
         {
             public double temp { get; set; }
@@ -32,17 +42,23 @@ namespace Pogodynka_w57003
             public double humidity { get; set; }
            
         }
-
+        /// <summary>
+        /// klasa odpowiedzialalna za pobraine informacji o sile wiatru
+        /// </summary>
         public class wind
         {
             public double speed { get; set; }
         }
-
+        /// <summary>
+        /// klasa odpowiedzialalna za pobraine informacji o inicjałów Panśtwa do którego należy miejscowość
+        /// </summary>
         public class sys
         {
             public string country { get; set; }
         }
-
+        /// <summary>
+        /// klasa definiująca zmienne do poszczeglnych typów danych
+        /// </summary>
         public class Root
         {
             public string name { get; set; }

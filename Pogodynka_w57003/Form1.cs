@@ -31,8 +31,9 @@ namespace Pogodynka_w57003
             InitializeComponent();
             getWeather("Rzeszow");
             getForcast("Rzeszow");
+           
         }
-
+       
         /// <summary>
         /// Funkcjonalność pobrania danych z API dla pogody aktualnej
         /// </summary>
@@ -43,8 +44,9 @@ namespace Pogodynka_w57003
             {
                 
                 string url = string.Format("http://api.openweathermap.org/data/2.5/weather?q={0}&APPID={1}&units=metric&cnt=6", city, APPID);
+           
+                var json = web.DownloadString(url);    
 
-                var json = web.DownloadString(url);
                 var result = JsonConvert.DeserializeObject<WeatherInfo.Root>(json);
 
                 WeatherInfo.Root outPut = result;
@@ -54,8 +56,9 @@ namespace Pogodynka_w57003
                 label_temp.Text = string.Format("{0} \u00B0" + "C", outPut.main.temp);
                 label_speed.Text = string.Format("{0} km/h", outPut.wind.speed);
                 label_preesure.Text = string.Format("{0} hPa", outPut.main.pressure);
-                pictureBox1.Image = setIcon(outPut.weather[0].icon);
                 label9.Text = string.Format("{0}", outPut.weather[0].description);
+                pictureBox1.Image = setIcon(outPut.weather[0].icon);
+                
                  
             }
 
@@ -180,7 +183,6 @@ namespace Pogodynka_w57003
                 panel_dock.Width = 236;
                 panel_dock.Height = 637;
                 pokazelementydocka();
-                
             }
         }
 
@@ -354,7 +356,6 @@ namespace Pogodynka_w57003
                 using (var str = response.GetResponseStream())
                     pictureUrl.Image = Bitmap.FromStream(str);
             }
-            
         }
 
         /// <summary>

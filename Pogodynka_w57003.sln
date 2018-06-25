@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pogodynka_w57003", "Pogodynka_w57003\Pogodynka_w57003.csproj", "{2D9DAE73-03F3-442F-A499-0E40BB9FE133}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchUnitTest", "SearchUnitTest\SearchUnitTest.csproj", "{FA8066EF-AF42-4543-BF5F-1268A0BEA846}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pogodynka.Test", "SearchUnitTest\pogodynka.Test.csproj", "{FA8066EF-AF42-4543-BF5F-1268A0BEA846}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
